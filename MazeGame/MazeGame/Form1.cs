@@ -1,21 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MazeGame
 {
     public partial class Form1 : Form
     {
+        private System.Media.SoundPlayer _startGameSound =
+            new System.Media.SoundPlayer(
+                @"C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\StartGameSound.wav");
+
+        private System.Media.SoundPlayer _deadPlayerSound =
+            new System.Media.SoundPlayer(
+                @"C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\DeadPlayerSound.wav");
+        
+        private System.Media.SoundPlayer _winGameSound =
+            new System.Media.SoundPlayer(
+                @"C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\WinGameSound.wav");
+        
+        
         public Form1()
         {
             InitializeComponent();
             MoveToStart();
+            _startGameSound.Play();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -33,12 +41,14 @@ namespace MazeGame
 
         private void FinishLabel_MouseEnter_1(object sender, EventArgs e)
         {
+            _winGameSound.Play();
             MessageBox.Show("Congratulations!");
             Close();
         }
 
         private void wallMouseEnter(object sender, EventArgs e)
         {
+            _deadPlayerSound.Play();
             MoveToStart();
         }
     }
