@@ -15,6 +15,7 @@ namespace MazeGame
         public Form1()
         {
             InitializeComponent();
+            MoveToStart();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -22,10 +23,23 @@ namespace MazeGame
             throw new System.NotImplementedException();
         }
 
-        private void FinishLabel_MouseEnter(object sender, EventArgs e)
+        private void MoveToStart()
+        {
+            Point startingPoint = panel1.Location;
+            startingPoint.Offset(10,10);
+            Cursor.Position = PointToScreen(startingPoint);
+        }
+
+
+        private void FinishLabel_MouseEnter_1(object sender, EventArgs e)
         {
             MessageBox.Show("Congratulations!");
             Close();
+        }
+
+        private void wallMouseEnter(object sender, EventArgs e)
+        {
+            MoveToStart();
         }
     }
 }

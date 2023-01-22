@@ -30,10 +30,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.FinishLabel = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -58,8 +59,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.FinishLabel = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             this.panel1.Controls.Add(this.label29);
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.label23);
@@ -95,27 +95,37 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(41, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(720, 457);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseEnter += new System.EventHandler(this.wallMouseEnter);
+            // 
+            // FinishLabel
+            // 
+            this.FinishLabel.Location = new System.Drawing.Point(627, 406);
+            this.FinishLabel.Name = "FinishLabel";
+            this.FinishLabel.Size = new System.Drawing.Size(56, 23);
+            this.FinishLabel.TabIndex = 29;
+            this.FinishLabel.Text = "Finish";
+            this.FinishLabel.MouseEnter += new System.EventHandler(this.FinishLabel_MouseEnter_1);
             // 
             // label29
             // 
             this.label29.BackColor = System.Drawing.Color.PaleGreen;
-            this.label29.Location = new System.Drawing.Point(627, 238);
+            this.label29.Location = new System.Drawing.Point(596, 313);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(29, 93);
+            this.label29.Size = new System.Drawing.Size(69, 23);
             this.label29.TabIndex = 28;
             // 
             // label28
             // 
             this.label28.BackColor = System.Drawing.Color.PaleGreen;
-            this.label28.Location = new System.Drawing.Point(580, 313);
+            this.label28.Location = new System.Drawing.Point(627, 238);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(76, 23);
+            this.label28.Size = new System.Drawing.Size(38, 93);
             this.label28.TabIndex = 27;
+            this.label28.MouseEnter += new System.EventHandler(this.wallMouseEnter);
             // 
             // label27
             // 
@@ -125,13 +135,14 @@
             this.label27.Size = new System.Drawing.Size(29, 93);
             this.label27.TabIndex = 26;
             // 
-            // label26
+            // label1
             // 
-            this.label26.BackColor = System.Drawing.Color.PaleGreen;
-            this.label26.Location = new System.Drawing.Point(3, 432);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(715, 23);
-            this.label26.TabIndex = 25;
+            this.label1.BackColor = System.Drawing.Color.PaleGreen;
+            this.label1.Location = new System.Drawing.Point(-2, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(556, 23);
+            this.label1.TabIndex = 25;
+            this.label1.MouseEnter += new System.EventHandler(this.wallMouseEnter);
             // 
             // label25
             // 
@@ -277,13 +288,14 @@
             this.label8.Size = new System.Drawing.Size(29, 387);
             this.label8.TabIndex = 7;
             this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.label8.MouseEnter += new System.EventHandler(this.wallMouseEnter);
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.PaleGreen;
-            this.label7.Location = new System.Drawing.Point(545, 43);
+            this.label7.Location = new System.Drawing.Point(580, 43);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 23);
+            this.label7.Size = new System.Drawing.Size(138, 23);
             this.label7.TabIndex = 6;
             // 
             // label6
@@ -326,28 +338,20 @@
             this.label2.Size = new System.Drawing.Size(122, 23);
             this.label2.TabIndex = 1;
             // 
-            // label1
+            // label26
             // 
-            this.label1.BackColor = System.Drawing.Color.PaleGreen;
-            this.label1.Location = new System.Drawing.Point(-2, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(514, 23);
-            this.label1.TabIndex = 0;
-            // 
-            // FinishLabel
-            // 
-            this.FinishLabel.Location = new System.Drawing.Point(627, 398);
-            this.FinishLabel.Name = "FinishLabel";
-            this.FinishLabel.Size = new System.Drawing.Size(53, 23);
-            this.FinishLabel.TabIndex = 29;
-            this.FinishLabel.Text = "Finish";
-            this.FinishLabel.MouseEnter += new System.EventHandler(this.FinishLabel_MouseEnter);
+            this.label26.BackColor = System.Drawing.Color.PaleGreen;
+            this.label26.Location = new System.Drawing.Point(41, 478);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(720, 23);
+            this.label26.TabIndex = 26;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 533);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -357,7 +361,13 @@
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label FinishLabel;
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label26;
 
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -376,10 +386,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -388,8 +394,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-
-        private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.Panel panel1;
 
