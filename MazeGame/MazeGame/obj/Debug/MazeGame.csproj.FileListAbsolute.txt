@@ -1,0 +1,11 @@
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\bin\Debug\MazeGame.exe.config
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\bin\Debug\MazeGame.exe
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\bin\Debug\MazeGame.pdb
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\obj\Debug\MazeGame.csproj.AssemblyReference.cache
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\obj\Debug\MazeGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\obj\Debug\MazeGame.Properties.Resources.resources
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\obj\Debug\MazeGame.csproj.GenerateResource.cache
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\obj\Debug\MazeGame.csproj.CoreCompileInputs.cache
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\obj\Debug\MazeGame.exe
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\obj\Debug\MazeGame.pdb
+C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\MazeGame\obj\Debug\MazeGame.Form1.resources
