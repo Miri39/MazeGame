@@ -6,6 +6,9 @@ namespace MazeGame
 {
     public partial class Form1 : Form
     {
+        private bool _gameIsRunning = false;
+        private int _deaths = -1;
+        
         private System.Media.SoundPlayer _startGameSound =
             new System.Media.SoundPlayer(
                 @"C:\Users\MIRI\OneDrive\Desktop\gdsc\C#\MazeGame\MazeGame\StartGameSound.wav");
@@ -22,8 +25,14 @@ namespace MazeGame
         public Form1()
         {
             InitializeComponent();
+            StartGame();
+        }
+
+        private void StartGame()
+        {
             MoveToStart();
             _startGameSound.Play();
+            _gameIsRunning = true;
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -41,6 +50,7 @@ namespace MazeGame
 
         private void FinishLabel_MouseEnter_1(object sender, EventArgs e)
         {
+            _gameIsRunning = false;
             _winGameSound.Play();
             MessageBox.Show("Congratulations!");
             Close();
@@ -48,8 +58,21 @@ namespace MazeGame
 
         private void wallMouseEnter(object sender, EventArgs e)
         {
-            _deadPlayerSound.Play();
+            if(_deaths > -1) 
+                PlayDeadSound();
+            IncrementDeaths();
             MoveToStart();
+        }
+
+        private void IncrementDeaths()
+        {
+            _deaths++;
+            DeathsCounter.Text = "You died " + _deaths + " times";
+        }
+        private void PlayDeadSound()
+        {
+            if(_gameIsRunning)
+                _deadPlayerSound.Play();
         }
     }
 }

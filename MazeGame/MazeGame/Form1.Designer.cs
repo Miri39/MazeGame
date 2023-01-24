@@ -60,6 +60,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.DeathsCounter = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,7 +100,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(720, 457);
             this.panel1.TabIndex = 0;
-            this.panel1.MouseEnter += new System.EventHandler(this.wallMouseEnter);
+            this.panel1.MouseLeave += new System.EventHandler(this.wallMouseEnter);
             // 
             // FinishLabel
             // 
@@ -207,6 +208,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(29, 177);
             this.label18.TabIndex = 17;
+            this.label18.MouseEnter += new System.EventHandler(this.wallMouseEnter);
             // 
             // label17
             // 
@@ -215,6 +217,7 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(29, 177);
             this.label17.TabIndex = 16;
+            this.label17.MouseEnter += new System.EventHandler(this.wallMouseEnter);
             // 
             // label16
             // 
@@ -263,6 +266,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 177);
             this.label11.TabIndex = 10;
+            this.label11.MouseEnter += new System.EventHandler(this.wallMouseEnter);
             // 
             // label10
             // 
@@ -346,11 +350,20 @@
             this.label26.Size = new System.Drawing.Size(720, 23);
             this.label26.TabIndex = 26;
             // 
+            // DeathsCounter
+            // 
+            this.DeathsCounter.Location = new System.Drawing.Point(567, 10);
+            this.DeathsCounter.Name = "DeathsCounter";
+            this.DeathsCounter.Size = new System.Drawing.Size(157, 23);
+            this.DeathsCounter.TabIndex = 27;
+            this.DeathsCounter.Text = "You died 0 times";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 533);
+            this.Controls.Add(this.DeathsCounter);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -360,6 +373,8 @@
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label DeathsCounter;
 
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
